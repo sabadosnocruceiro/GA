@@ -504,6 +504,7 @@
           <button class="filter-btn" data-category="Sucesos">Sucesos</button>
           <button class="filter-btn" data-category="Defensa">Defensa</button>
           <button class="filter-btn" data-category="Opinión">Opinión</button>
+          <button class="filter-btn" data-category="Armada">Armada</button>
         </div>
 
         <div class="news-grid" id="news-grid">
@@ -532,6 +533,7 @@
           <a href="#noticias" data-jump-category="Deportes">Deportes</a>
           <a href="#noticias" data-jump-category="Sucesos">Sucesos</a>
           <a href="#noticias" data-jump-category="Opinión">Opinión</a>
+          <a href="#noticias" data-jump-category="Armada">Armada</a>
         </div>
       </section>
 
@@ -614,12 +616,13 @@
       const cats = Array.isArray(item.categories) ? item.categories.join(" ") : "";
       const haystack = normalize([item.title,item.description,item.link,cats].join(" "));
 
-      if (haystack.includes("universidad") || haystack.includes("universidade") || haystack.includes("udc") || haystack.includes("campus") || haystack.includes("uniferrol")) return "Universidade";
+      if (haystack.includes("universidad") || haystack.includes("universidade") || haystack.includes("udc") || haystack.includes("campus") || haystack.includes("industrial")) return "investigacion";
       if (haystack.includes("cultura") || haystack.includes("ocio") || haystack.includes("teatro") || haystack.includes("musica") || haystack.includes("exposicion") || haystack.includes("libro") || haystack.includes("cine") || haystack.includes("jofre") || haystack.includes("auditorio")) return "Cultura";
       if (haystack.includes("deporte") || haystack.includes("racing") || haystack.includes("futbol") || haystack.includes("baloncesto") || haystack.includes("natacion") || haystack.includes("regata")) return "Deportes";
       if (haystack.includes("suceso") || haystack.includes("accidente") || haystack.includes("detenido") || haystack.includes("incendio") || haystack.includes("policia") || haystack.includes("guardia civil")) return "Sucesos";
       if (haystack.includes("opinion") || haystack.includes("tribuna") || haystack.includes("editorial") || haystack.includes("cartas al director")) return "Opinión";
       if (haystack.includes("ferrolterra") || haystack.includes("naron") || haystack.includes("fene") || haystack.includes("neda") || haystack.includes("ares") || haystack.includes("mugardos") || haystack.includes("valdovino") || haystack.includes("cedeira") || haystack.includes("ortigueira") || haystack.includes("as pontes") || haystack.includes("pontedeume") || haystack.includes("cabanas")) return "Comarca";
+      if (haystack.includes("armada") || haystack.includes("buque") || haystack.includes("naval") || haystack.includes("marina") || haystack.includes("intendencia") || haystack.includes("militar") || haystack.includes("arsenal") || haystack.includes("almirante") || haystack.includes("fragata") || haystack.includes("armada")) return "Armada";
       if (haystack.includes("ferrol")) return "Ferrol";
       return "Todas";
     }
