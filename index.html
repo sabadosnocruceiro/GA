@@ -616,7 +616,7 @@
       const cats = Array.isArray(item.categories) ? item.categories.join(" ") : "";
       const haystack = normalize([item.title,item.description,item.link,cats].join(" "));
 
-      if (haystack.includes("campus") || haystack.includes("universidade") || haystack.includes("industrial") || haystack.includes("alumnas") || haystack.includes("citeni") || haystack.includes("industrial")) return "Universidad";
+      if (haystack.includes("campus") || haystack.includes("universidade") || haystack.includes("industrial") || haystack.includes("Escuela") || haystack.includes("Citeni") || haystack.includes("alumnado")) return "Universidad";
       if (haystack.includes("cultura") || haystack.includes("ocio") || haystack.includes("teatro") || haystack.includes("musica") || haystack.includes("exposicion") || haystack.includes("libro") || haystack.includes("cine") || haystack.includes("jofre") || haystack.includes("auditorio")) return "Cultura";
       if (haystack.includes("deporte") || haystack.includes("racing") || haystack.includes("futbol") || haystack.includes("baloncesto") || haystack.includes("natacion") || haystack.includes("regata")) return "Deportes";
       if (haystack.includes("suceso") || haystack.includes("accidente") || haystack.includes("detenido") || haystack.includes("incendio") || haystack.includes("policia") || haystack.includes("guardia civil")) return "Sucesos";
